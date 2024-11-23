@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./src/output.css">
+    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mx-auto w-full h-[40px] bg-gray-200 flex flex-row justify-around itmes-center ">
+       <h1 class="text-[18px] text-gray-600 font-[500]">Largest Gadget site In Bangladesh </h1>
+        <img class="h-[30px] w-[30px]"   src="./assets/noti.svg">
+
+
+    </div>
+     <div class="container mx-auto w-full lg:h-[100px] sm:h-[160px] flex justify-center items-center lg:flex-row sm:flex-col ">
+       <div class="flex justify-center items-center">
+
+           <img class="h-[60px] w-[60px]" src="./assets/phone.svg">  
+           <h1 class="text-[28px] text-gray-700 font-[600]">Mobile Maya</h1>
+            
+       </div> 
+       <div class="container mx-auto flex items-center justify-center">
+        <select class="border-[0.5px] border-gray-700 bg-gray-700 text-white rounded-md px-2 py-1 focus:ring-2 focus:ring-offset-2 focus:ring-white">
+            <option value="All">All</option>
+            <option value="camera">Camera</option>
+            <option value="tablets">Tablets</option>
+            <option value="computer">Computer</option>
+          </select>
+        <input type="text" class="border-[0.5px] border-gray-700 bg-gray-700 text-white rounded-md px-2 py-1 ml-2 focus:ring-2 focus:ring-offset-2 focus:ring-white" placeholder="Search..." />
+      
+        <span class="ml-2 text-gray-900">
+          <svg class="h-6 w-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </span>
+       
+      </div>
+
+       </div>
+
+      </div>
+     <div class="container mx-auto flex gap-10 lg:flex-row bg-gray-200 w-full lg:h-[40px] sm:h-[700px] sm:flex-col justify-center items-center sm:py-0">
+       <h1 class="cursor-pointer font-[600] text-[24px] ">Home</h1> 
+       <h1 class="cursor-pointer font-[600] text-[24px] ">All</h1> 
+       <h1 class="cursor-pointer font-[600] text-[24px] ">Bands</h1> 
+       <h1 class="cursor-pointer font-[600] text-[24px] ">Price List</h1> 
+       <h1 class="cursor-pointer font-[600] text-[24px] ">Compare</h1> 
+       <h1 class="cursor-pointer font-[600] text-[24px] ">Showrooms</h1> 
+       <h1 class="cursor-pointer font-[600] text-[24px] ">Service Centes</h1> 
+       <h1 class="cursor-pointer font-[600] text-[24px] ">Reviews</h1> 
+
+
+     </div>
+      <div class="container mx-auto flex gap-3 lg:flex-row sm:flex-col justify-center items-center ">
+        <div class="flex flex-row shadow-lg justify-center items-center">
+          <div class="w-[650px] h-[400px] flex flex-col justify-center items-center pl-[-100px]">
+            <div class="flex flex-col items-center space-y-4">
+              <!-- Title -->
+              <h2 class="text-[28px] font-bold text-blue-600">LET'S FIND A MOBILE</h2>
+            
+              <!-- Progress Bar Wrapper -->
+              <div class="relative w-[700px] ">
+                <!-- Range Slider for Lower Limit -->
+                <input
+                  type="range"
+                  min="750"
+                  max="680000"
+                  value="750"
+                  id="lowerLimit"
+                  class="m-5 absolute appearance-none w-[500px] h-6 bg-gray-700 rounded-full outline-none slider-thumb-lower"
+                  oninput="updateLowerSlider()"
+                />
+                <!-- Range Slider for Upper Limit -->
+                <input
+                  type="range"
+                  min="750"
+                  max="680000"
+                  value="680000"
+                  id="upperLimit"
+                  class="m-5 absolute appearance-none w-[500px] h-6 bg-gray-700 rounded-full outline-none slider-thumb-upper"
+                  oninput="updateUpperSlider()"
+                />
+              </div>
+            
+              <!-- Input Fields -->
+              <div class="flex justify-center items-center w-[500px]">
+                <div class="mt-5 flex items-center space-x-1">
+                  <span class="text-[20px] font-medium">Tk.</span>
+                  <input
+                    type="number"
+                    id="inputLowerLimit"
+                    class="m-10 border text-[28px] rounded-md p-1 w-23"
+                    min="750"
+                    max="680000"
+                    value="750"
+                    oninput="syncSlider('lower')"
+                  />
+                </div>
+                <div class="mt-5 flex items-center space-x-1">
+                  <span class="text-[20px] font-medium">Tk.</span>
+                  <input
+                    type="number"
+                    id="inputUpperLimit"
+                    class="m-10 border text-[28px] rounded-md p-1 w-23"
+                    min="750"
+                    max="680000"
+                    value="680000"
+                    oninput="syncSlider('upper')"
+                  />
+                </div>
+              </div>
+            </div>
+            
+           <button class="mt-5 h-[70px] w-[250px] font-[600] bg-blue-400 rounded-[15px] flex justify-center items-center">Find Products</button>
+    
+          </div>
+          <div class="border-l border-gray-200 h-[300px]"></div>
+
+          <div class="flex h-[400px]  flex-col justify-center items-start px-[20px]">
+            <h1 class="text-[30px] font-[700]">By Price</h1>
+            <div class="mt-5 w-20 h-[0.5px] bg-gray-200 text-center"></div>
+            <h1 class="mt-5 text-blue-700 text-[28px] font-[400]">Below 5K</h1>
+            <h1 class="text-blue-700 text-[28px] font-[400]"> 5K to 10K</h1>
+            <h1 class="text-blue-700 text-[28px] font-[400]"> 10K to 20K</h1>
+            <h1 class="text-blue-700 text-[28px] font-[400]"> 20K to 50K</h1>
+            <h1 class="text-blue-700 text-[28px] font-[400]"> 50K to 100K</h1>
+         </div>
+        </div>
+        <div class="sm:ml-[30px] flex flex-row justify-center items-center shadow-lg ">
+          <div class="flex flex-col h-[400px]  justify-center items-center">
+            <h1 class="text-[30px] font-[700]">By Brand</h1>
+            <div class="mt-5 w-20 h-[0.5px] bg-black text-center"></div>     
+            <div class="flex gap-5 flex-row justify-around items-center">
+              <div class="mt-5 flex flex-col pl-[10px]">
+                <h1 class="text-blue-700 text-[18px] font-[400]">Samsung </h1>
+                <h1 class="text-blue-700 text-[18px] font-[400]"> Asus</h1>
+                <h1 class="text-blue-700 text-[18px] font-[400]"> Techno</h1>
+                <h1 class="text-blue-700 text-[18px] font-[400]"> itel</h1>
+                <h1 class="text-blue-700 text-[18px] font-[400]"> Infinx</h1>
+              </div>
+              <div class="flex flex-col">
+                <h1 class="mt-5 text-blue-700 text-[18px] font-[400]">Realme</h1>
+                <h1 class="text-blue-700 text-[18px] font-[400]"> Nokio</h1>
+                <h1 class="text-blue-700 text-[18px] font-[400]"> Google</h1>
+                <h1 class="text-blue-700 text-[18px] font-[400]"> Oppo</h1>
+                <h1 class="text-blue-700 text-[18px] font-[400]"> MicroMax</h1>
+      
+              </div> 
+      
+            </div>
+           </div> 
+           <div class="flex w-[400px] h-[400px] flex-col justify-center items-center">
+           
+            <h1 class="text-[30px] font-[700]">By Feature</h1>
+            <div class="mt-5 w-20 h-[0.5px] bg-black text-center"></div>
+           <div class="flex flex-col justify-center items-start">  
+            <h1 class="mt-5 text-blue-700 text-[18px] font-[400]">4G volt</h1>
+            <h1 class="text-blue-700 text-[18px] font-[400]"> 5G</h1>
+            <h1 class="text-blue-700 text-[18px] font-[400]"> Puchhole Camera</h1>
+            <h1 class="text-blue-700 text-[18px] font-[400]"> Waterproof</h1>
+            <h1 class="text-blue-700 text-[18px] font-[400]">Leight Weight</h1>
+         </div>
+
+          </div>
+
+
+        </div>
+
+
+
+      </div> 
+      
+  
+
+     
+      
+        <!-- Left Arrow -->
+     
+      <div class="container mx-auto h-[50px] bg-gray-200 flex itmes-center justify-start shadow-lg my-[20px] px-[20px]">
+        <h1 class="text-[24px] font-[600]">Latest  Mobile Phones</h1>
+      </div>
+          <!-- Slider Container -->
+       
+          <div id="slider" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide flex gap-10 flex-row  justify-center items-center ">
+                          
+                <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+                  <!-- Icon positioned in the upper left corner -->
+                  <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+                    <h1 class="text-[18px]">4.5</h1>
+                    <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+                  </div>
+                
+                  <!-- Content inside the div -->
+                  <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+                  <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+                  <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+                  <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+                </div>
+                <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+                  <!-- Icon positioned in the upper left corner -->
+                  <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+                    <h1 class="text-[18px]">4.5</h1>
+                    <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+                  </div>
+                
+                  <!-- Content inside the div -->
+                  <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+                  <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+                  <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+                  <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+                </div>
+                <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+                  <!-- Icon positioned in the upper left corner -->
+                  <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+                    <h1 class="text-[18px]">4.5</h1>
+                    <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+                  </div>
+                
+                  <!-- Content inside the div -->
+                  <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+                  <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+                  <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+                  <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+                
+              </div>
+              
+              <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+                  <!-- Icon positioned in the upper left corner -->
+                  <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+                    <h1 class="text-[18px]">4.5</h1>
+                    <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+                  </div>
+                
+                  <!-- Content inside the div -->
+                  <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+                  <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+                  <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+                  <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+                </div>
+                <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+                  <!-- Icon positioned in the upper left corner -->
+                  <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+                    <h1 class="text-[18px]">4.5</h1>
+                    <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+                  </div>
+                
+                  <!-- Content inside the div -->
+                  <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+                  <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+                  <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+                  <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+                </div>
+                <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+                  <!-- Icon positioned in the upper left corner -->
+                  <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+                    <h1 class="text-[18px]">4.5</h1>
+                    <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+                  </div>
+                
+                  <!-- Content inside the div -->
+                  <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+                  <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+                  <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+                  <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+                </div>
+                </div> 
+              
+              <div class="swiper-slide flex gap-10 flex-row justify-center items-center ">
+
+                <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+                  <!-- Icon positioned in the upper left corner -->
+                  <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+                    <h1 class="text-[18px]">4.5</h1>
+                    <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+                  </div>
+                
+                  <!-- Content inside the div -->
+                  <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+                  <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+                  <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+                  <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+                </div>
+                <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+                  <!-- Icon positioned in the upper left corner -->
+                  <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+                    <h1 class="text-[18px]">4.5</h1>
+                    <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+                  </div>
+                
+                  <!-- Content inside the div -->
+                  <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+                  <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+                  <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+                  <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+                </div>
+                <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+                  <!-- Icon positioned in the upper left corner -->
+                  <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+                    <h1 class="text-[18px]">4.5</h1>
+                    <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+                  </div>
+                
+                  <!-- Content inside the div -->
+                  <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+                  <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+                  <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+                  <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+                </div>
+                <div class="relative mt-10 h-[300px] w-[190px] shadow-lg flex gap-3 flex-col justify-center items-center">
+                  <!-- Icon positioned in the upper left corner -->
+                  <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+                    <h1 class="text-[18px]">4.5</h1>
+                    <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+                  </div>
+                
+                  <!-- Content inside the div -->
+                  <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+                  <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+                  <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+                  <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+                </div>
+                <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+                  <!-- Icon positioned in the upper left corner -->
+                  <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+                    <h1 class="text-[18px]">4.5</h1>
+                    <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+                  </div>
+                
+                  <!-- Content inside the div -->
+                  <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+                  <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+                  <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+                  <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+                </div>
+                <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+                  <!-- Icon positioned in the upper left corner -->
+                  <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+                    <h1 class="text-[18px]">4.5</h1>
+                    <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+                  </div>
+                
+                  <!-- Content inside the div -->
+                  <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+                  <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+                  <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+                  <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+                </div>
+
+              </div>
+              
+            </div>
+            <div class="swiper-button-next h-[80px] w-[50px] bg-gray-400 text-black text-[39px] font-[600]"></div>
+            <div class="swiper-button-prev h-[50px] w-[50px]"></div>
+          </div>
+          <!-- Add this script at the end of your body -->
+          <div class="h-[50px] bg-gray-200 flex itmes-center justify-start shadow-lg my-[20px] px-[20px]">
+            <h1 class="text-[24px] font-[600]">Products News</h1>
+          </div> 
+            
+          <!---blogs posting---> 
+          <div class="flex gap-10 lg:flex-row sm:flex-col justify-center items-center">
+            <div class="flex gap-5 flex-col justify-center items-center">
+               <div class="h-[230px] w-[800px] flex justify-around items-center shadow-lg">
+                 <img class="h-[210px] w-[360px]" src="./assets/blogs.jpg">
+                 <div class='ml-[10px] flex flex-col justify-center items-start'>
+                  <h1 class="text-[24px] font-[700]">This is new news</h1>
+                  <h1 class="mt-4 text-[18px] font-[600]">Samsung Galaxy 24 ultra gets DXOmark Scoring </h1>
+                  <h1 class=" text-[18px] font-[600]">It's An outsanding Invention of mordern Time</h1>               
+                 </div>
+                </div>     
+                <div class="h-[230px] w-[800px] flex justify-around items-center shadow-lg">
+                  <img class="h-[210px] w-[360px]" src="./assets/blogs.jpg">
+                  <div class='ml-[10px] flex flex-col justify-center items-start'>
+                   <h1 class="text-[24px] font-[700]">This is new news</h1>
+                   <h1 class="mt-4 text-[18px] font-[600]">Samsung Galaxy 24 ultra gets DXOmark Scoring </h1>
+                   <h1 class=" text-[18px] font-[600]">It's An outsanding Invention of mordern Time</h1>               
+                  </div>
+                 </div>
+                 <div class="h-[230px] w-[800px] flex justify-around items-center shadow-lg">
+                  <img class="h-[210px] w-[360px]" src="./assets/blogs.jpg">
+                  <div class='ml-[10px] flex flex-col justify-center items-start'>
+                   <h1 class="text-[24px] font-[700]">This is new news</h1>
+                   <h1 class="mt-4 text-[18px] font-[600]">Samsung Galaxy 24 ultra gets DXOmark Scoring </h1>
+                   <h1 class=" text-[18px] font-[600]">It's An outsanding Invention of mordern Time</h1>               
+                  </div>
+                 </div>     
+
+            </div>
+           <div class="w-[400px] h-[500px] shadow-lg flex gap-4 flex-col justify-center items-center">
+               <div class=" w-[400px] flex justify-around items-center">
+                 <h1 class="text-[32px] font-[700]">Brands</h1>  
+                  <h1 class="text-[24px] text-blue-700 font-[400]">View All</h1>   
+               </div>
+               <div class="w-[400px] flex gap-10 px-[10px]">
+                <div class="h-[40px] w-[120px] border-gray-300 border-[0.5px] flex justify-center items-center">
+                  <h1 class="text-blue-900 font-[800]">Samsaung</h1>
+                </div>   
+                <div class="h-[40px] w-[120px] border-gray-300 border-[0.5px] flex justify-center items-center">
+                  <h1 class="text-blue-900 font-[800]">Samsaung</h1>
+                </div> 
+                <div class="h-[40px] w-[120px] border-gray-300 border-[0.5px] flex justify-center items-center">
+                  <h1 class="text-blue-900 font-[800]">Samsaung</h1>
+                </div>   
+                  
+               </div>
+               <div class="w-[400px] flex gap-10 px-[10px]">
+                <div class="h-[40px] w-[120px] border-gray-300 border-[0.5px] flex justify-center items-center">
+                  <h1 class="text-blue-900 font-[800]">Samsaung</h1>
+                </div>   
+                <div class="h-[40px] w-[120px] border-gray-300 border-[0.5px] flex justify-center items-center">
+                  <h1 class="text-blue-900 font-[800]">Samsaung</h1>
+                </div> 
+                <div class="h-[40px] w-[120px] border-gray-300 border-[0.5px] flex justify-center items-center">
+                  <h1 class="text-blue-900 font-[800]">Samsaung</h1>
+                </div>   
+                  
+               </div>
+               <div class="w-[400px] flex gap-10 px-[10px]">
+                <div class="h-[40px] w-[120px] border-gray-300 border-[0.5px] flex justify-center items-center">
+                  <h1 class="text-blue-900 font-[800]">Samsaung</h1>
+                </div>   
+                <div class="h-[40px] w-[120px] border-gray-300 border-[0.5px] flex justify-center items-center">
+                  <h1 class="text-blue-900 font-[800]">Samsaung</h1>
+                </div> 
+                <div class="h-[40px] w-[120px] border-gray-300 border-[0.5px] flex justify-center items-center">
+                  <h1 class="text-blue-900 font-[800]">Samsaung</h1>
+                </div>   
+                  
+               </div>
+               <div class="w-[400px] flex gap-10 px-[10px]">
+                <div class="h-[40px] w-[120px] border-gray-300 border-[0.5px] flex justify-center items-center">
+                  <h1 class="text-blue-900 font-[800]">Samsaung</h1>
+                </div>   
+                <div class="h-[40px] w-[120px] border-gray-300 border-[0.5px] flex justify-center items-center">
+                  <h1 class="text-blue-900 font-[800]">Samsaung</h1>
+                </div> 
+                <div class="h-[40px] w-[120px] border-gray-300 border-[0.5px] flex justify-center items-center">
+                  <h1 class="text-blue-900 font-[800]">Samsaung</h1>
+                </div>   
+                  
+               </div>
+               <div class="w-[400px] flex gap-10 px-[10px]">
+                <div class="h-[40px] w-[120px] border-gray-300 border-[0.5px] flex justify-center items-center">
+                  <h1 class="text-blue-900 font-[800]">Samsaung</h1>
+                </div>   
+                <div class="h-[40px] w-[120px] border-gray-300 border-[0.5px] flex justify-center items-center">
+                  <h1 class="text-blue-900 font-[800]">Samsaung</h1>
+                </div> 
+                <div class="h-[40px] w-[120px] border-gray-300 border-[0.5px] flex justify-center items-center">
+                  <h1 class="text-blue-900 font-[800]">Samsaung</h1>
+                </div>   
+                  
+               </div>
+              </div>
+             
+
+           </div>
+
+
+          </div>
+       <!--grid cols-->
+        
+       <div class="h-[50px] bg-gray-200 flex itmes-center justify-start shadow-lg my-[20px] px-[20px]">
+        <h1 class="text-[24px] font-[600]">Latest Mobile Phones</h1>
+      </div>
+      
+      <div class="mt-5 grid gap-3 gap-y-14 grid-cols-5 place-content-center place-items-center">
+        <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+          <!-- Icon positioned in the upper left corner -->
+          <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+            <h1 class="text-[18px]">4.5</h1>
+            <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+          </div>
+        
+          <!-- Content inside the div -->
+          <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+          <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+          <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+          <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+        </div>
+        <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+          <!-- Icon positioned in the upper left corner -->
+          <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+            <h1 class="text-[18px]">4.5</h1>
+            <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+          </div>
+        
+          <!-- Content inside the div -->
+          <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+          <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+          <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+          <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+        </div>
+        <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+          <!-- Icon positioned in the upper left corner -->
+          <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+            <h1 class="text-[18px]">4.5</h1>
+            <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+          </div>
+        
+          <!-- Content inside the div -->
+          <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+          <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+          <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+          <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+        </div>
+        <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+          <!-- Icon positioned in the upper left corner -->
+          <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+            <h1 class="text-[18px]">4.5</h1>
+            <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+          </div>
+        
+          <!-- Content inside the div -->
+          <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+          <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+          <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+          <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+        </div>
+        <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+          <!-- Icon positioned in the upper left corner -->
+          <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+            <h1 class="text-[18px]">4.5</h1>
+            <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+          </div>
+        
+          <!-- Content inside the div -->
+          <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+          <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+          <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+          <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+        </div>
+        <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+          <!-- Icon positioned in the upper left corner -->
+          <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+            <h1 class="text-[18px]">4.5</h1>
+            <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+          </div>
+        
+          <!-- Content inside the div -->
+          <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+          <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+          <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+          <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+        </div>
+        <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+          <!-- Icon positioned in the upper left corner -->
+          <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+            <h1 class="text-[18px]">4.5</h1>
+            <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+          </div>
+        
+          <!-- Content inside the div -->
+          <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+          <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+          <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+          <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+        </div>
+        <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+          <!-- Icon positioned in the upper left corner -->
+          <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+            <h1 class="text-[18px]">4.5</h1>
+            <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+          </div>
+        
+          <!-- Content inside the div -->
+          <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+          <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+          <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+          <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+        </div>
+        <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+          <!-- Icon positioned in the upper left corner -->
+          <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+            <h1 class="text-[18px]">4.5</h1>
+            <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+          </div>
+        
+          <!-- Content inside the div -->
+          <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+          <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+          <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+          <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+        </div>
+        <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+          <!-- Icon positioned in the upper left corner -->
+          <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+            <h1 class="text-[18px]">4.5</h1>
+            <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+          </div>
+        
+          <!-- Content inside the div -->
+          <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+          <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+          <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+          <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+        </div>
+
+        
+      </div>
+
+
+
+     <!--last grid cols-->
+      
+     <div class="my-20 h-[50px] bg-gray-200 flex itmes-center justify-start shadow-lg  px-[20px]">
+      <h1 class="text-[24px] font-[600]">Latest Reviews</h1>
+    </div>
+
+
+   <div class="grid gap-4 grid-cols-3 place-content-center place-items-center">
+    <div class="relative h-[500px] w-[400px] shadow-lg flex flex-col justify-center items-center">
+      <div class=" relative z-[1] flex mb-[-40px] ml-[-200px]">
+        <h1 class="text-[32px]">⭐</h1>
+        <h1 class="text-[32px]">⭐</h1>
+        <h1 class="text-[32px]">⭐</h1>
+        <h1 class="text-[32px]">⭐</h1>
+      </div>
+      <img class="h-[200px] w-[400px]" src="./assets/images.jfif">
+      <div class="flex flex-col justify-center items-start px-[15px] py-[10px]">
+        <h1 class="text-[24px] font-[700]">Techno Camon Full Review</h1>
+        <h1 class="mt-[10px] text-[18px] font-[400]">The Tecno Camon 30 is a smartphone known for its impressive 50 MP camera setup</h1>
+        <h1 class="text-[18px] font-[400]">features like OIS and a 50 MP front-facing camera</h1>
+        <h1 class="text-[18px] font-[400]">the device ensures robust multitasking capabilities</h1>
+      </div>
+    </div>
+    <div class="relative h-[500px] w-[400px] shadow-lg flex flex-col justify-center items-center">
+      <div class=" relative z-[1] flex mb-[-40px] ml-[-200px]">
+        <h1 class="text-[32px]">⭐</h1>
+        <h1 class="text-[32px]">⭐</h1>
+        <h1 class="text-[32px]">⭐</h1>
+        <h1 class="text-[32px]">⭐</h1>
+      </div>
+      <img class="h-[200px] w-[400px]" src="./assets/images.jfif">
+      <div class="flex flex-col justify-center items-start px-[15px] py-[10px]">
+        <h1 class="text-[24px] font-[700]">Techno Camon Full Review</h1>
+        <h1 class="mt-[10px] text-[18px] font-[400]">The Tecno Camon 30 is a smartphone known for its impressive 50 MP camera setup</h1>
+        <h1 class="text-[18px] font-[400]">features like OIS and a 50 MP front-facing camera</h1>
+        <h1 class="text-[18px] font-[400]">the device ensures robust multitasking capabilities</h1>
+      </div>
+    </div>
+    <div class="relative h-[500px] w-[400px] shadow-lg flex flex-col justify-center items-center">
+      <div class=" relative z-[1] flex mb-[-40px] ml-[-200px]">
+        <h1 class="text-[32px]">⭐</h1>
+        <h1 class="text-[32px]">⭐</h1>
+        <h1 class="text-[32px]">⭐</h1>
+        <h1 class="text-[32px]">⭐</h1>
+      </div>
+      <img class="h-[200px] w-[400px]" src="./assets/images.jfif">
+      <div class="flex flex-col justify-center items-start px-[15px] py-[10px]">
+        <h1 class="text-[24px] font-[700]">Techno Camon Full Review</h1>
+        <h1 class="mt-[10px] text-[18px] font-[400]">The Tecno Camon 30 is a smartphone known for its impressive 50 MP camera setup</h1>
+        <h1 class="text-[18px] font-[400]">features like OIS and a 50 MP front-facing camera</h1>
+        <h1 class="text-[18px] font-[400]">the device ensures robust multitasking capabilities</h1>
+      </div>
+    </div>
+    <div class="relative h-[500px] w-[400px] shadow-lg flex flex-col justify-center items-center">
+      <div class=" relative z-[1] flex mb-[-40px] ml-[-200px]">
+        <h1 class="text-[32px]">⭐</h1>
+        <h1 class="text-[32px]">⭐</h1>
+        <h1 class="text-[32px]">⭐</h1>
+        <h1 class="text-[32px]">⭐</h1>
+      </div>
+      <img class="h-[200px] w-[400px]" src="./assets/images.jfif">
+      <div class="flex flex-col justify-center items-start px-[15px] py-[10px]">
+        <h1 class="text-[24px] font-[700]">Techno Camon Full Review</h1>
+        <h1 class="mt-[10px] text-[18px] font-[400]">The Tecno Camon 30 is a smartphone known for its impressive 50 MP camera setup</h1>
+        <h1 class="text-[18px] font-[400]">features like OIS and a 50 MP front-facing camera</h1>
+        <h1 class="text-[18px] font-[400]">the device ensures robust multitasking capabilities</h1>
+      </div>
+    </div>     
+    </div>
+    <div class="h-[50px] bg-gray-200 flex itmes-center justify-start shadow-lg my-[20px] px-[20px]">
+      <h1 class="text-[24px] font-[600]">Latest  Mobile Phones</h1>
+    </div>
+    <div id="slider" class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide flex gap-10 flex-row  justify-center items-center ">
+                    
+          <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+            <!-- Icon positioned in the upper left corner -->
+            <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+              <h1 class="text-[18px]">4.5</h1>
+              <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+            </div>
+          
+            <!-- Content inside the div -->
+            <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+            <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+            <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+            <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+          </div>
+          <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+            <!-- Icon positioned in the upper left corner -->
+            <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+              <h1 class="text-[18px]">4.5</h1>
+              <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+            </div>
+          
+            <!-- Content inside the div -->
+            <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+            <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+            <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+            <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+          </div>
+          <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+            <!-- Icon positioned in the upper left corner -->
+            <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+              <h1 class="text-[18px]">4.5</h1>
+              <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+            </div>
+          
+            <!-- Content inside the div -->
+            <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+            <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+            <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+            <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+          
+        </div>
+        
+        <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+            <!-- Icon positioned in the upper left corner -->
+            <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+              <h1 class="text-[18px]">4.5</h1>
+              <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+            </div>
+          
+            <!-- Content inside the div -->
+            <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+            <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+            <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+            <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+          </div>
+          <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+            <!-- Icon positioned in the upper left corner -->
+            <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+              <h1 class="text-[18px]">4.5</h1>
+              <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+            </div>
+          
+            <!-- Content inside the div -->
+            <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+            <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+            <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+            <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+          </div>
+          <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+            <!-- Icon positioned in the upper left corner -->
+            <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+              <h1 class="text-[18px]">4.5</h1>
+              <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+            </div>
+          
+            <!-- Content inside the div -->
+            <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+            <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+            <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+            <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+          </div>
+          </div> 
+        
+        <div class="swiper-slide flex gap-10 flex-row justify-center items-center ">
+
+          <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+            <!-- Icon positioned in the upper left corner -->
+            <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+              <h1 class="text-[18px]">4.5</h1>
+              <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+            </div>
+          
+            <!-- Content inside the div -->
+            <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+            <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+            <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+            <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+          </div>
+          <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+            <!-- Icon positioned in the upper left corner -->
+            <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+              <h1 class="text-[18px]">4.5</h1>
+              <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+            </div>
+          
+            <!-- Content inside the div -->
+            <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+            <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+            <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+            <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+          </div>
+          <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+            <!-- Icon positioned in the upper left corner -->
+            <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+              <h1 class="text-[18px]">4.5</h1>
+              <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+            </div>
+          
+            <!-- Content inside the div -->
+            <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+            <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+            <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+            <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+          </div>
+          <div class="relative mt-10 h-[300px] w-[190px] shadow-lg flex gap-3 flex-col justify-center items-center">
+            <!-- Icon positioned in the upper left corner -->
+            <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+              <h1 class="text-[18px]">4.5</h1>
+              <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+            </div>
+          
+            <!-- Content inside the div -->
+            <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+            <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+            <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+            <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+          </div>
+          <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+            <!-- Icon positioned in the upper left corner -->
+            <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+              <h1 class="text-[18px]">4.5</h1>
+              <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+            </div>
+          
+            <!-- Content inside the div -->
+            <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+            <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+            <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+            <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+          </div>
+          <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center shadow-lg">
+            <!-- Icon positioned in the upper left corner -->
+            <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+              <h1 class="text-[18px]">4.5</h1>
+              <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+            </div>
+          
+            <!-- Content inside the div -->
+            <img class="h-[180px] w-[190px]" src="./assets/phone1.jpg">
+            <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+            <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+            <button class="w-[190px] bg-gray-400 text-[24px] flex justify-center items-center"> <span class="font-[700]">+ </span>  Compare</button>
+          </div>
+
+        </div>
+        
+      </div>
+      <div class="swiper-button-next h-[20px] w-[20px]"></div>
+      <div class="swiper-button-prev h-[20px] w-[20px]"></div>
+    </div>     
+    <div class="h-[50px] bg-gray-200 flex itmes-center justify-start shadow-lg my-[20px] px-[20px]">
+      <h1 class="text-[24px] font-[600]">Latest  Comaprison</h1>
+    </div>    
+      <div class="grid gap-3 grid-cols-3 place-items-center place-content-center">
+        <div class="h-[450px] w-[470px] shadow-lg border-[0.4px] border-slate-200 flex gap-4 flex-col  justify-center items-center ">
+          <div class="flex gap-4 flex-row justify-center items-center">
+            <div class="">
+              <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center ">
+                <!-- Icon positioned in the upper left corner -->
+                <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+                  <h1 class="text-[18px]">4.5</h1>
+                  <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+                </div>
+              
+                <!-- Content inside the div -->
+                <img class="w-[350px] h-[300px]" src="./assets/phone1.jpg">
+                <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+                <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+               
+              </div>
+
+            </div>
+            <div class="w-[80px] h-[80px] rounded-[50%] bg-cyan-400 flex justify-center items-center ">
+              <h1 class="text-[24px] font-[700] text-white">VS</h1>     
+
+               
+            </div>
+            <div class="">
+              <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center ">
+                <!-- Icon positioned in the upper left corner -->
+                <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+                  <h1 class="text-[18px]">4.5</h1>
+                  <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+                </div>
+              
+                <!-- Content inside the div -->
+                <img class=" w-[220px] h-[320px] " src="./assets/phone1.jpg">
+                <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+                <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+               
+              </div>
+            </div> 
+                  
+          </div>
+          <button class="h-[50px] w-[180px] py-[20px] border-cyan-400 border rounded-[15px] flex justify-center items-center">  <h1 class="text-[24px] font-[400]">Compare</h1></button>  
+  
+        </div>
+        <div class="h-[450px] w-[470px] shadow-lg border-[0.4px] border-slate-200 flex gap-4 flex-col  justify-center items-center ">
+          <div class="flex gap-4 flex-row justify-center items-center">
+            <div class="">
+              <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center ">
+                <!-- Icon positioned in the upper left corner -->
+                <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+                  <h1 class="text-[18px]">4.5</h1>
+                  <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+                </div>
+              
+                <!-- Content inside the div -->
+                <img class="w-[350px] h-[300px]" src="./assets/phone1.jpg">
+                <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+                <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+               
+              </div>
+
+            </div>
+            <div class="w-[80px] h-[80px] rounded-[50%] bg-cyan-400 flex justify-center items-center ">
+              <h1 class="text-[24px] font-[700] text-white">VS</h1>     
+
+               
+            </div>
+            <div class="">
+              <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center ">
+                <!-- Icon positioned in the upper left corner -->
+                <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+                  <h1 class="text-[18px]">4.5</h1>
+                  <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+                </div>
+              
+                <!-- Content inside the div -->
+                <img class=" w-[220px] h-[320px] " src="./assets/phone1.jpg">
+                <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+                <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+               
+              </div>
+            </div> 
+                  
+          </div>
+          <button class="h-[50px] w-[180px] py-[20px] border-cyan-400 border rounded-[15px] flex justify-center items-center">  <h1 class="text-[24px] font-[400]">Compare</h1></button>  
+  
+        </div>
+   
+
+        <div class="h-[450px] w-[470px] shadow-lg border-[0.4px] border-slate-200 flex gap-4 flex-col  justify-center items-center ">
+          <div class="flex gap-4 flex-row justify-center items-center">
+            <div class="">
+              <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center ">
+                <!-- Icon positioned in the upper left corner -->
+                <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+                  <h1 class="text-[18px]">4.5</h1>
+                  <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+                </div>
+              
+                <!-- Content inside the div -->
+                <img class="w-[350px] h-[300px]" src="./assets/phone1.jpg">
+                <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+                <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+               
+              </div>
+
+            </div>
+            <div class="w-[80px] h-[80px] rounded-[50%] bg-cyan-400 flex justify-center items-center ">
+              <h1 class="text-[24px] font-[700] text-white">VS</h1>     
+
+               
+            </div>
+            <div class="">
+              <div class="relative mt-10 h-[300px] w-[190px]  flex gap-3 flex-col justify-center items-center ">
+                <!-- Icon positioned in the upper left corner -->
+                <div class="absolute bg-green-600 top-2 left-2 flex items-center">
+                  <h1 class="text-[18px]">4.5</h1>
+                  <img class="h-[20px] w-[20px] ml-1" src="./assets/star-outline.svg">
+                </div>
+              
+                <!-- Content inside the div -->
+                <img class=" w-[220px] h-[320px] " src="./assets/phone1.jpg">
+                <h1 class="text-[28px] text-gray-600 font-[600]">Realme C55</h1>
+                <h1 class="mt-6 text-[29px] text-indigo-600 mb-3">19,900bdt</h1>
+               
+              </div>
+            </div> 
+                  
+          </div>
+          <button class="h-[50px] w-[180px] py-[20px] border-cyan-400 border rounded-[15px] flex justify-center items-center">  <h1 class="text-[24px] font-[400]">Compare</h1></button>  
+  
+        </div>
+   
+
+
+
+      </div>
+
+      <div class="mt-5 bg-gray-500 flex justify-around items-center h-[60px] w-full">
+         <h1 class="text-white lg:text-[24px] sm:text-[16px] font-[500]">Subscribe For Top Stoires And nEws </h1>
+         <div class="flex justify-center items-center">
+          <input type="text" placeholder="Enter mail" class="lg:px-20 sm:px-10 py-2 border border-gray-300 text-[16px] font-[700] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+  <button class="lg:px-8 sm:px-4 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600">Submit</button>  
+         </div>
+
+      </div>
+      <footer class="h-[400px] grid gap-10 grid-cols-4 place-content-center bg-gray-700 place-items-center">
+          <div class="flex flex-col justify-center items-start">
+            <h1 class="text-white text-[24px] font-[700]">Useful links</h1>
+            <h1 class="mt-3 text-black text-[18px] font-[500]">About Us</h1> 
+            <h1 class=" text-black text-[18px] font-[500]">Services</h1> 
+            <h1 class=" text-black text-[18px] font-[500]">TechnoLogies</h1>
+            <h1 class=" text-black text-[18px] font-[500]">Terms & Conditions</h1>
+            <h1 class=" text-black text-[18px] font-[500]">DCMA</h1>           
+          </div>
+          <div class="flex flex-col justify-center items-start">
+            <h1 class="text-white text-[24px] font-[700]">Product Catagoires</h1>
+            <h1 class="mt-3 text-black text-[18px] font-[500]">Mobile</h1> 
+            <h1 class=" text-black text-[18px] font-[500]">Tablets</h1> 
+            <h1 class=" text-black text-[18px] font-[500]">Watches</h1>
+            <h1 class=" text-black text-[18px] font-[500]">Laptops</h1>
+            <h1 class=" text-black text-[18px] font-[500]">Cameras</h1>           
+          </div>
+          <div class="flex flex-col justify-center items-start">
+            <h1 class="text-white text-[24px] font-[700]">Download our Apps</h1>
+             <img class="h-[50px] w-[50px]" src="./assets/play.png">
+                    
+          </div>
+           <div class="flex gap-2 justify-center items-center">
+            <img class="h-[60px] w-[60px]" src="./assets/phone.svg">  
+            <h1 class="text-[28px] text-white font-[600]">Mobile Maya</h1>
+
+           </div>
+      </footer>     
+      <div class=" bg-gray-600 flex justify-around items-center h-[60px] w-full">
+        <h1 class="text-white lg:text-[24px] sm:text-[16px] font-[500]">@2013-2024 MobileMaya.com||All Rights Reserved </h1>
+        <div class="flex gap-4 justify-center items-center">
+         <img class="h-[50px] w-[50px]" src="./assets/fb.svg">
+         <img class="h-[50px] w-[50px]" src="./assets/logo-youtube.svg">
+         <img class="h-[50px] w-[50px]" src="./assets/logo-instagram.svg">
+        </div>
+
+     </div>
+
+     
+  
+
+     <!-- Custom Styles -->
+    <style>
+      input[type='range'] {
+        -webkit-appearance: none;
+      }
+      input[type='range']::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        height: 36px;
+        width: 16px;
+        background-color: red;
+        border-radius: 20%;
+        cursor: pointer;
+      }
+    </style>
+    
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+     
+    <script>
+      function updateLowerSlider() {
+        const lowerSlider = document.getElementById('lowerLimit');
+        const inputLower = document.getElementById('inputLowerLimit');
+    
+        inputLower.value = lowerSlider.value;
+    
+        // Prevent the lower slider from going above the upper slider
+        const upperSliderValue = parseInt(document.getElementById('upperLimit').value);
+        if (parseInt(lowerSlider.value) > upperSliderValue) {
+          lowerSlider.value = upperSliderValue;
+          inputLower.value = upperSliderValue;
+        }
+      }
+    
+      function updateUpperSlider() {
+        const upperSlider = document.getElementById('upperLimit');
+        const inputUpper = document.getElementById('inputUpperLimit');
+    
+        inputUpper.value = upperSlider.value;
+    
+        // Prevent the upper slider from going below the lower slider
+        const lowerSliderValue = parseInt(document.getElementById('lowerLimit').value);
+        if (parseInt(upperSlider.value) < lowerSliderValue) {
+          upperSlider.value = lowerSliderValue;
+          inputUpper.value = lowerSliderValue;
+        }
+      }
+    
+      function syncSlider(type) {
+        const lowerSlider = document.getElementById('lowerLimit');
+        const upperSlider = document.getElementById('upperLimit');
+        const inputLower = document.getElementById('inputLowerLimit');
+        const inputUpper = document.getElementById('inputUpperLimit');
+    
+        // Update slider positions based on input field changes
+        if (type === 'lower') {
+          if (parseInt(inputLower.value) >= parseInt(upperSlider.value)) {
+            inputLower.value = upperSlider.value - 1; // Keep it less than upper limit
+          }
+          lowerSlider.value = inputLower.value;
+        } else if (type === 'upper') {
+          if (parseInt(inputUpper.value) <= parseInt(lowerSlider.value)) {
+            inputUpper.value = parseInt(lowerSlider.value) + 1; // Keep it greater than lower limit
+          }
+          upperSlider.value = inputUpper.value;
+        }
+      }
+    </script>
+    
+  <!-- Your existing HTML code -->
+
+<!-- Include SwiperJS JavaScript -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+
+     
+    
+   
+</body>
+</html>
